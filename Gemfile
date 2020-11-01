@@ -32,6 +32,7 @@ gem 'bootsnap', '>= 1.4.2', require: false
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'bullet'
 end
 
 group :development do
@@ -58,3 +59,4 @@ gem 'devise', '~> 4.7', '>= 4.7.2'
 gem 'friendly_id', '~> 5.3'
 gem 'sidekiq', '~> 6.1', '>= 6.1.1'
 gem 'name_of_person', '~> 1.1', '>= 1.1.1'
+gem 'strong_migrations'
