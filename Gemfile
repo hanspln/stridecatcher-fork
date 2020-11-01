@@ -58,3 +58,5 @@ gem 'devise', '~> 4.7', '>= 4.7.2'
 gem 'friendly_id', '~> 5.3'
 gem 'sidekiq', '~> 6.1', '>= 6.1.1'
 gem 'name_of_person', '~> 1.1', '>= 1.1.1'
+gem 'strong_migrations'
+
