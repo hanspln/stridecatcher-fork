@@ -16,6 +16,11 @@
     </div>
 
     <div class="input-group">
+      <%= f.label :time_zone, class:"label" %>
+      <%= f.time_zone_select :time_zone %>
+    </div>
+    
+    <div class="input-group">
       <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
         <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
       <% end %>
