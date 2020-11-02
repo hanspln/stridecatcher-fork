@@ -16,6 +16,11 @@
     </div>
 
     <div class="input-group">
+      <%= f.label :time_zone, class:"label" %>
+      <%= f.time_zone_select :time_zone %>
+    </div>
+
+    <div class="input-group">
       <div class="flex">
         <%= f.label :password, class: "label" %>
         <% if @minimum_password_length %>
