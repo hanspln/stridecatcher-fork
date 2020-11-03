@@ -1,6 +1,7 @@
 require "application_system_test_case"
 
 class UsersTest < ApplicationSystemTestCase
+  include Devise::Test::IntegrationHelpers
   def setup
     @user = users(:one)
   end
@@ -24,6 +25,20 @@ class UsersTest < ApplicationSystemTestCase
     click_button "Log in"
 
     assert_selector "div", text: "Signed in successfully."
+  end
+
+
+  test "should change time zone" do
+    sign_in @user
+
+    visit edit_user_registration_path
+
+    select 'Eastern Time (US & Canada)'
+
+    fill_in "Current password", with: @user.password
+    click_button "Update"
+
+    assert_equal 'Eastern Time (US & Canada)', @user.reload.time_zone
   end
 end
 
