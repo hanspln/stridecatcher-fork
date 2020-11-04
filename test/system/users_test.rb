@@ -3,7 +3,7 @@ require "application_system_test_case"
 class UsersTest < ApplicationSystemTestCase
   include Devise::Test::IntegrationHelpers
   def setup
-    @user = users(:one)
+    @user = users(:confirmed_user)
   end
   test "should register" do
     visit new_user_registration_path
